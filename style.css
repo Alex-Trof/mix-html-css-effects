@@ -7,6 +7,9 @@ html, body {
   background-color: rgb(87, 80, 80);
 }
 
+/*Shop, wrench and chat icons*/
+
+
 .boxes{
   display: flex;
   justify-content: center;
@@ -69,7 +72,11 @@ html, body {
   animation: slide .25s;
 }
 
-#centerSquare {
+.centerSquare {
+  flex: 1;
+}
+
+.squareContainer {
   display: flex;
   width: 20em;
   height: 5em;
@@ -95,6 +102,50 @@ html, body {
 }
 
 
+/*Circle scrolling*/
+
 .bottom-scroll {
-  align-self: flex-end;
+  display: flex;
+  flex: 1;
+}
+
+.circle-square {
+  display: flex;
+  align-self: center;
+  width: 10em;
+  height: 10em;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transition: transform .8s ease-in-out; 
+}
+
+.circle-square:hover {
+  transform: rotate(90deg);
+  animation-fill-mode: forwards; 
+}
+
+.fa-sun {
+  color: white;
+  font-size: 2em;
+}
+
+.circle-square > .fa-sun {
+  position: absolute;
+  top: 0;
+}
+
+.circle-square > .fa-store {
+  position: absolute;
+  bottom: 0;
+}
+
+.circle-square > .fa-wrench {
+  position: absolute;
+  left: 0;
+}
+
+.circle-square > .fa-comment {
+  position: absolute;
+  right: 0;
 }
