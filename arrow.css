@@ -1,8 +1,14 @@
-.arrow {
+.arrowButton {
+  margin: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   align-self: flex-end;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
 }
 
-.fa-arrow-down {
-  color: white;
+.fa-arrow-up {
   font-size: 2em;
 }

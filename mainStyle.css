@@ -1,0 +1,13 @@
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+  background-color: aqua;
+}
