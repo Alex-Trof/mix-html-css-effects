@@ -1,16 +1,43 @@
-html, body {
+.container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-content {
+  height: 100vh;
   display: flex;
-  height: 100%;
+  scroll-snap-align: center;
+  background-color: aqua;
+}
+
+.container1 {
+  display: flex;
+  flex: 1;
+}
+
+.container2 {
+  display: flex;
+  flex: 1;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(87, 80, 80);
+}
+
+.container3 {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 /*Shop, wrench and chat icons*/
 
+.squareContainer {
+  display: flex;
+  height: 9vh;
+  width: 17vw;
+  background-color: rgb(0, 0, 0);
+}
 
-.boxes{
+.boxes {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,14 +48,14 @@ html, body {
 }
 
 .boxes::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   bottom: 100%;
   background: #f0c427;
   z-index: -1;
-  transition: all .40s;
+  transition: all 0.4s;
 }
 
 .boxes:hover::before {
@@ -40,8 +67,8 @@ html, body {
   font-size: 2em;
 }
 
-.boxes:hover .fa-store{
-  animation: slide .25s;
+.boxes:hover .fa-store {
+  animation: slide 0.25s;
 }
 
 .fa-comment {
@@ -49,38 +76,27 @@ html, body {
   font-size: 2em;
 }
 
-.boxes:hover .fa-comment{
-  display: none!important;
+.boxes:hover .fa-comment {
+  display: none !important;
 }
 
 .fa-comment-dots {
   color: white;
   font-size: 2em;
-  display: none!important;
+  display: none !important;
 }
 
-.boxes:hover .fa-comment-dots{
-  display: inline-block!important;
-  animation: slide .25s;
+.boxes:hover .fa-comment-dots {
+  display: inline-block !important;
+  animation: slide 0.25s;
 }
 
 .fa-wrench {
   color: white;
   font-size: 2em;
 }
-.boxes:hover .fa-wrench{
-  animation: slide .25s;
-}
-
-.centerSquare {
-  flex: 1;
-}
-
-.squareContainer {
-  display: flex;
-  width: 20em;
-  height: 5em;
-  background-color: rgb(0, 0, 0);
+.boxes:hover .fa-wrench {
+  animation: slide 0.25s;
 }
 
 @keyframes slide {
@@ -101,28 +117,24 @@ html, body {
   }
 }
 
-
 /*Circle scrolling*/
 
 .bottom-scroll {
   display: flex;
-  flex: 1;
 }
 
 .circle-square {
   display: flex;
   align-self: center;
-  width: 10em;
-  height: 10em;
   position: relative;
   justify-content: center;
   align-items: center;
-  transition: transform .8s ease-in-out; 
+  transition: transform 0.8s ease-in-out;
 }
 
 .circle-square:hover {
   transform: rotate(90deg);
-  animation-fill-mode: forwards; 
+  animation-fill-mode: forwards;
 }
 
 .fa-sun {
